@@ -4,14 +4,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import uz.developers.appwarehouse.dto.InputProductsForOneDay;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import uz.developers.appwarehouse.entity.warehouseEntity.Category;
 import uz.developers.appwarehouse.entity.warehouseEntity.Input_Product;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
+@RepositoryRestResource(path = "inputProduct")
 public interface InputProductRepository extends JpaRepository<Input_Product, Long> {
 
     Page<Input_Product> findAllByProductId(Long product_id, Pageable pageable);

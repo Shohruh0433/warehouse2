@@ -4,12 +4,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import uz.developers.appwarehouse.entity.warehouseEntity.Category;
 import uz.developers.appwarehouse.entity.warehouseEntity.Output_Product;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@RepositoryRestResource(path = "outputRepository")
 public interface OutputProductRepository extends JpaRepository<Output_Product,Long> {
 
 

@@ -13,9 +13,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(
-        uniqueConstraints=
-        @UniqueConstraint(columnNames={"name", "category_id"}))
+@Table(uniqueConstraints= @UniqueConstraint(columnNames={"name", "category_id"}))
 public class Category extends AbsClass {
     @ManyToOne
     @JoinColumn(name = "category_id")

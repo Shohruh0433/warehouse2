@@ -3,11 +3,13 @@ package uz.developers.appwarehouse.repository.warehouse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import uz.developers.appwarehouse.entity.warehouseEntity.Input;
 import uz.developers.appwarehouse.entity.warehouseEntity.Output;
 
 import java.sql.Timestamp;
 
+@RepositoryRestResource(path = "output")
 public interface OutputRepository extends JpaRepository<Output,Long> {
     Page<Output> findAllByWarehouseId(Long id, Pageable pageable);
 

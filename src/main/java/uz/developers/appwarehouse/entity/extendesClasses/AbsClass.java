@@ -18,6 +18,7 @@ public abstract class AbsClass {
 
     @Column(nullable = false)
     private String  name;
-    private boolean active;
+
+    private boolean active=true;
 
 }

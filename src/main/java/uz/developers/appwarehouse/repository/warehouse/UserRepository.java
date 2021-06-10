@@ -15,6 +15,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "select  *from users" +
             "    join users_warehouses uw on users.id = uw.users_id" +
             "            where uw.warehouses_id=:id", nativeQuery = true)
+
     Page<User> findByWarehouseId(Long id, Pageable pageable);
 
    // Page<User> findByWarehousesIsAndId();

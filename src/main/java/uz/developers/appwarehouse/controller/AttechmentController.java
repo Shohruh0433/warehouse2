@@ -1,11 +1,11 @@
-package uz.developers.appwarehouse.controller.warehouse;
+package uz.developers.appwarehouse.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import uz.developers.appwarehouse.results.Result;
-import uz.developers.appwarehouse.service.worehouseService.AttachmentService;
+import uz.developers.appwarehouse.service.AttachmentService;
 
 import javax.servlet.http.HttpServletResponse;
 
